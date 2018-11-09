@@ -8,7 +8,7 @@
     <ProjectGuid>{AA29717D-1230-41A3-8682-CDB1E5564CCE}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <AssemblyName>MillionaireFake</AssemblyName>
+    <AssemblyName>ReMillionaireFake</AssemblyName>
     <OutputType>WinExe</OutputType>
     <StartupObject>MillionaireFake.Millionaire</StartupObject>
     <AssemblyMajorVersion>0</AssemblyMajorVersion>
@@ -46,7 +46,7 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <OutputPath>.\bin\</OutputPath>
-    <DocumentationFile>MillionaireFake.xml</DocumentationFile>
+    <DocumentationFile>ReMillionaireFake.xml</DocumentationFile>
     <DebugSymbols>True</DebugSymbols>
     <DefineDebug>True</DefineDebug>
     <DefineTrace>True</DefineTrace>
@@ -58,7 +58,7 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>.\bin\</OutputPath>
-    <DocumentationFile>MillionaireFake.xml</DocumentationFile>
+    <DocumentationFile>ReMillionaireFake.xml</DocumentationFile>
     <DebugSymbols>False</DebugSymbols>
     <DefineDebug>False</DefineDebug>
     <DefineTrace>True</DefineTrace>
@@ -86,7 +86,7 @@
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\x86\Debug\</OutputPath>
     <DefineConstants>Win32=True</DefineConstants>
-    <DocumentationFile>MillionaireFake.xml</DocumentationFile>
+    <DocumentationFile>ReMillionaireFake.xml</DocumentationFile>
     <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
     <DebugType>full</DebugType>
     <PlatformTarget>x86</PlatformTarget>
@@ -97,7 +97,7 @@
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\x86\Release\</OutputPath>
     <DefineConstants>Win32=True</DefineConstants>
-    <DocumentationFile>MillionaireFake.xml</DocumentationFile>
+    <DocumentationFile>ReMillionaireFake.xml</DocumentationFile>
     <Optimize>true</Optimize>
     <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
     <PlatformTarget>x86</PlatformTarget>
@@ -323,6 +323,18 @@
     <None Include="app.config" />
     <None Include="Millionaire_TemporaryKey.pfx" />
     <None Include="My Project\app.manifest" />
+    <None Include="Release\DataEnvironment1.DCA" />
+    <None Include="Release\dC.xlsx" />
+    <None Include="Release\fastestfinger.BAK" />
+    <None Include="Release\fastestfinger.xls" />
+    <None Include="Release\frmThreeWiseMen.log" />
+    <None Include="Release\MillionAire.log" />
+    <None Include="Release\Millionaire.PDM" />
+    <None Include="Release\MillionaireFake.application" />
+    <None Include="Release\MillionaireFake.exe.config" />
+    <None Include="Release\MillionaireFake.exe.lastcodeanalysissucceeded" />
+    <None Include="Release\MillionaireFake.exe.manifest" />
+    <None Include="Release\MillionaireFake.vshost.exe.config" />
     <None Include="_UpgradeReport.htm">
       <SubType>Preview</SubType>
     </None>
@@ -359,6 +371,118 @@
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Release\2001spaceo.wav" />
+    <Content Include="Release\aaaaaa.mp3" />
+    <Content Include="Release\adodb.dll" />
+    <Content Include="Release\anything.wav" />
+    <Content Include="Release\apollo_13_houston_problem.wav" />
+    <Content Include="Release\applauslong.wav" />
+    <Content Include="Release\ask_audience.mp3" />
+    <Content Include="Release\ask_full_length.mp3" />
+    <Content Include="Release\ask_full_length.wav" />
+    <Content Include="Release\better_man.wav" />
+    <Content Include="Release\brain_x.wav" />
+    <Content Include="Release\CHARGE.WAV" />
+    <Content Include="Release\CHEERS0V.WAV" />
+    <Content Include="Release\cormusic.wav" />
+    <Content Include="Release\ddipchk.wav" />
+    <Content Include="Release\ddipinc.wav" />
+    <Content Include="Release\ddipmus.wav" />
+    <Content Include="Release\doh.wav" />
+    <Content Include="Release\doYouFeelLucky.wav" />
+    <Content Include="Release\enjoyable_game.wav" />
+    <Content Include="Release\entitled_2_answer.wav" />
+    <Content Include="Release\excellent.wav" />
+    <Content Include="Release\fastestfinger.wav" />
+    <Content Include="Release\fastestfinger.wma" />
+    <Content Include="Release\fastestfingerwait.wav" />
+    <Content Include="Release\fat_drunk_stupid.wav" />
+    <Content Include="Release\FEAT.WAV" />
+    <Content Include="Release\ffingers.wav" />
+    <Content Include="Release\finalanswer.wav" />
+    <Content Include="Release\finalmusic.wav" />
+    <Content Include="Release\finmusic.mp3" />
+    <Content Include="Release\finmusic.wav" />
+    <Content Include="Release\foghorn_bowling_ball.wav" />
+    <Content Include="Release\foghorn_way_off.wav" />
+    <Content Include="Release\get_out.wav" />
+    <Content Include="Release\get_smart_missed.wav" />
+    <Content Include="Release\gomer_congrats.wav" />
+    <Content Include="Release\good_morning.wav" />
+    <Content Include="Release\hardy_fine_mess.wav" />
+    <Content Include="Release\humanerror.wav" />
+    <Content Include="Release\inconsistent.wav" />
+    <Content Include="Release\Interop.DAO.dll" />
+    <Content Include="Release\Interop.MSDATASRC.dll" />
+    <Content Include="Release\isthatyourfinalanswer.wav" />
+    <Content Include="Release\Jeopardy_Music.wav" />
+    <Content Include="Release\lets_play.mp3" />
+    <Content Include="Release\lets_play_millionaire.wav" />
+    <Content Include="Release\lightdown.mp3" />
+    <Content Include="Release\lightdown.wav" />
+    <Content Include="Release\Microsoft.VisualBasic.PowerPacks.dll" />
+    <Content Include="Release\Millionaire-questionsounds.mp3" />
+    <Content Include="Release\Millionaire-questionsounds.wav" />
+    <Content Include="Release\millionaire.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Release\MillionaireFake.exe" />
+    <Content Include="Release\MillionaireFake.exe.CodeAnalysisLog.xml" />
+    <Content Include="Release\MillionaireFake.pdb" />
+    <Content Include="Release\MillionaireFake.vshost.exe" />
+    <Content Include="Release\MillionaireFake.xml" />
+    <Content Include="Release\millionairpiano.wav" />
+    <Content Include="Release\mind_is_going.wav" />
+    <Content Include="Release\no_sign - Copy.wav" />
+    <Content Include="Release\no_sign.wav" />
+    <Content Include="Release\partyaintoverkid.wav" />
+    <Content Include="Release\passed1000 - Copy.wav" />
+    <Content Include="Release\passed1000.mp3" />
+    <Content Include="Release\passed1000.wav" />
+    <Content Include="Release\PHNBUSY.WAV" />
+    <Content Include="Release\PHONENEW.WAV" />
+    <Content Include="Release\prefergameofchess.wav" />
+    <Content Include="Release\psychotic.wav" />
+    <Content Include="Release\quickfgr.mp3" />
+    <Content Include="Release\quit.wav" />
+    <Content Include="Release\quite_sure.wav" />
+    <Content Include="Release\rightdecision.wav" />
+    <Content Include="Release\right_one.wav" />
+    <Content Include="Release\shallweplayagame.wav" />
+    <Content Include="Release\shrek_champion.wav" />
+    <Content Include="Release\SOUND1.WAV" />
+    <Content Include="Release\SOUND827.WAV" />
+    <Content Include="Release\start-end.mp3" />
+    <Content Include="Release\start-end.wav" />
+    <Content Include="Release\STARTUP.WAV" />
+    <Content Include="Release\stress_pill.wav" />
+    <Content Include="Release\stripes_fact_jack.wav" />
+    <Content Include="Release\stupid_is.wav" />
+    <Content Include="Release\stupid_not.wav" />
+    <Content Include="Release\t1_excellent.wav" />
+    <Content Include="Release\t2_hasta_la_vista.wav" />
+    <Content Include="Release\taught_u_well.wav" />
+    <Content Include="Release\thankyoumrknowitall.wav" />
+    <Content Include="Release\thatiscorrect.wav" />
+    <Content Include="Release\thinkmusic.wav" />
+    <Content Include="Release\waitQ1-3.wav" />
+    <Content Include="Release\waitq11-15.wav" />
+    <Content Include="Release\waitQ4-5.wav" />
+    <Content Include="Release\waitQ6-8.wav" />
+    <Content Include="Release\waitq9-10.wav" />
+    <Content Include="Release\war_games_play_a_game.wav" />
+    <Content Include="Release\wide_wide_world.wav" />
+    <Content Include="Release\willy_wonka_you_lose.wav" />
+    <Content Include="Release\winlight.mp3" />
+    <Content Include="Release\winlight.wav" />
+    <Content Include="Release\woe.wav" />
+    <Content Include="Release\wronganswer.mp3" />
+    <Content Include="Release\wronganswer.wav" />
+    <Content Include="Release\yahoo.wav" />
+    <Content Include="Release\yeababyyea.wav" />
+    <Content Include="Release\YouGotIt.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
   <PropertyGroup>
