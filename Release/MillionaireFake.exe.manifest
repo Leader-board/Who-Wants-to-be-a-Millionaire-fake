@@ -1,0 +1,1077 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="MillionaireFake.exe" version="0.9.0.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="MillionaireFake" version="0.9.6931.29756" language="neutral" processorArchitecture="x86" />
+    <commandLine file="MillionaireFake.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!-- UAC Manifest Options
+            If you want to change the Windows User Account Control level replace the 
+            requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+            If you want to utilize File and Registry Virtualization for backward 
+            compatibility then delete the requestedExecutionLevel node.
+        -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="2.0.50727.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="WindowsBase" version="3.0.0.0" publicKeyToken="31bf3856ad364e35" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.DAO.dll" size="65536">
+      <assemblyIdentity name="Interop.DAO" version="4.0.0.0" language="neutral" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>a4DuEFpuavQe8GHjG1mQ8a8mGvk=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.MSDATASRC.dll" size="4096">
+      <assemblyIdentity name="Interop.MSDATASRC" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>CW0CpMfePSGkHqZnwVROmgXQhO8=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.VisualBasic.PowerPacks.dll" size="269568">
+      <assemblyIdentity name="Microsoft.VisualBasic.PowerPacks" version="12.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>dxPFUOdUIbsDR5AlKZf+Vw5fkpw=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MillionaireFake.exe" size="1040864">
+      <assemblyIdentity name="MillionaireFake" version="0.9.6931.29756" language="neutral" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>f4K8Ts8Jb6Dfk0mRJWVHiA1DpAU=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="MillionaireFake.exe.config" size="2290">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>a0mrLK15vh4wAutBHn5ZUxDuMDw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\2001spaceo.wav" size="465779">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>a0caNwwAH2p7dnQtysfXazQvzPA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\aaaaaa.mp3" size="101145">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>OJejZF4FRZSxFszH9zx1qd+B8x0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\adodb.dll" size="126400">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>fxKKchABBa4opSBxxsT7VLqcO3I=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\anything.wav" size="13590">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Bt+bdEG2bpKTNMIqkYfnr0e9VQw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\apollo_13_houston_problem.wav" size="3970">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>HA8ACdqqFML7+7YBt5a0pv70vFw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\applauslong.wav" size="284048">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>0juLToTiscRJYxKOBQ9BqWNyHhM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\ask_audience.mp3" size="48064">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>JRpMT5pfTVhh2ZPXulgzNZNRUP4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\ask_full_length.mp3" size="271045">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>pNJpH7pWaCHM7XP5UCuIpjLz1t8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\ask_full_length.wav" size="5976634">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>zeSUb1CGVMUIAXC2hsRl8Yr7h7E=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\better_man.wav" size="6830">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>EK/IKNffAu6CgENuW5TCnpXvN20=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\brain_x.wav" size="5530">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>KFWbq2/v2GD2zmiD3TyEl0ty744=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\CHARGE.WAV" size="142894">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>BuMh4GC0vCDRo7DJKD5TGkTktsU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\CHEERS0V.WAV" size="32602">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>8tGDYzTiytqe03u2j8s7Vr7ttHo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\cormusic.wav" size="565326">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>E21Aau0BumRV/ve4b2mdEyKdkBY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\ddipchk.wav" size="529278">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>JPPcSrH3lzVX0ETN7Xp0DhgalK8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\ddipinc.wav" size="2116878">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>aXYt0AcgbU/MC5L1hy9jx8pRb5A=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\ddipmus.wav" size="1764078">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>GzLdE+1xSHGRT6cXBgcFK6hoi10=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\doh.wav" size="6108">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>B/fS/lhYxMlIK0hvb3uAyZ+CaPQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\doYouFeelLucky.wav" size="22170">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>mfJy57CAUq8O9ckBIjqqQvuC1SA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\enjoyable_game.wav" size="5562">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>918hmcBaMH0pMQmKauX/3vByprc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\entitled_2_answer.wav" size="9950">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>w0rDdwyRV2BChHCjVEjCyHG0FW0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\excellent.wav" size="20370">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>+DFGTp85HulVmBYCfp9aPs04HsE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\fastestfinger.wav" size="2580536">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>NIJMqo8QKP12SSnTn1Z6+CGaGpI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\fastestfinger.wma" size="259447">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>1u/07ie20BpuwOhD3jez/9FThfU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\fastestfingerwait.wav" size="1728364">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>SBgtOviU0jnBnZvGnwQnrxYPmNo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\fat_drunk_stupid.wav" size="7090">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>KQ+sK9NImc4cJYIo4cGr9CX1E/o=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\FEAT.WAV" size="89518">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>BwRo8JOOwXvHKAIFuAKG0QjcLjc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\ffingers.wav" size="2972218">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>ocFiaFQ74edhFaIVDhthiSE16W4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\finalanswer.wav" size="385082">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>i5wOEQESCkZMf48wZpuSMB8kRF0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\finalmusic.wav" size="629608">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>PbhSe4TuuCX7pXsxuUduigBi/hk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\finmusic.mp3" size="696000">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>F7Eu88pgLsWB9Nn/5w7Hnmqbbpc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\finmusic.wav" size="2641998">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>9AXQzXgwF33O12IDMejIxpf5OYI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\foghorn_bowling_ball.wav" size="7350">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>nYXolKLbGU7+C9iIF6au1aPBV2Y=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\foghorn_way_off.wav" size="9170">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>WPtTylGE/yd2i5M2zmWd8dvvS18=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\get_out.wav" size="19050">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>ZBlgYArDLWfbcbCMspjU3OrrKfc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\get_smart_missed.wav" size="5010">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>QjVY/AtOgfCkM9lWNbI2gn+vOb8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\gomer_congrats.wav" size="8390">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>DKt/6aBiYg40pGgj8H6tZtVLUaQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\good_morning.wav" size="11250">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>8/YYY0lID9pszqy0Yk1po5ErZAk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\hardy_fine_mess.wav" size="7610">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>WdCL9PxofXxON6cmT1hIhrTNhCE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\humanerror.wav" size="120980">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>49eGmKPQTL1zu9HWFo2pdPmIvvY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\inconsistent.wav" size="7350">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>KR6H13hrMyCOS/W5WBlgw+HBxPM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\Interop.DAO.dll" size="65536">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>TmpdUh2hoUlEycOzZSxjvSklrTM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\Interop.MSDATASRC.dll" size="4096">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>dgejBKYkcc/pjac11EZXDkLIqKk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\isthatyourfinalanswer.wav" size="14226">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>aPcirKwkjuE1gYA1ggF4ME6zFHU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\Jeopardy_Music.wav" size="549120">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>h8xAemR2A3Jefr4Cu7K0fyJVrEM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\lets_play.mp3" size="56005">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>F4bxiu5ApLt6vMCWJj+1cSL1+DA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\lets_play_millionaire.wav" size="148666">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>KOkxVE4nndOzcSqhtZb+pYlWDRw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\lightdown.mp3" size="40959">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>EfJeoKMTPgsBi5VH5Ouct+4FQGw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\lightdown.wav" size="903226">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>74gCLKADEadUPYbPmvUb5WPLbHE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\Microsoft.VisualBasic.PowerPacks.dll" size="269568">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>dxPFUOdUIbsDR5AlKZf+Vw5fkpw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\millionaire.mdb" size="851968" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>pIesM7+aSGqAH77ahZ8+09/ANDU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\MillionaireFake.exe" size="1952768">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Qg5kWlcxCgToZxbpmh6XXElJVek=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\MillionaireFake.exe.CodeAnalysisLog.xml" size="24545" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>uJJ5yD/SpjzOItSs0KzubAid8eY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\MillionaireFake.pdb" size="140800">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>c6zsY3Za9NhjvhbPkcr9tA2dttM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\MillionaireFake.vshost.exe" size="21464">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>S+Lga7onMAjYfi6kB9WjHrUwdaI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\MillionaireFake.xml" size="695" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>zdKmFRFM6iN2gw5XGOxs0UWbpHE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\Millionaire-questionsounds.mp3" size="571350">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>FIyAsSzHkvRTpicqOPfBtrbLMdU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\Millionaire-questionsounds.wav" size="6299194">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>KmobtXjPOlWFmWxUEdVCkMr9QNc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\millionairpiano.wav" size="273438">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>p0jSNO3pWKrey7P9SqQ6fmU8eYs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\mind_is_going.wav" size="13590">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>cQaNIrFfHRgG4gPV2WC/ghsLgm8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\no_sign - Copy.wav" size="8130">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>LwHgWRwlZ1NbYXKezbMVlBXWiE0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\no_sign.wav" size="8130">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>LwHgWRwlZ1NbYXKezbMVlBXWiE0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\partyaintoverkid.wav" size="3970">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>DBu0r8m3g+UHcxoR39o68CWWz7Y=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\passed1000 - Copy.wav" size="2451514">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>p6OLWtUNizdrV4Pr51l35LfJq0w=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\passed1000.mp3" size="111176">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>DAmT/1zSKzvj2uzW26mY2DCkZb8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\passed1000.wav" size="2451514">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>p6OLWtUNizdrV4Pr51l35LfJq0w=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\PHNBUSY.WAV" size="216622">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>kcsE1pLep8Thy2ooduivc2j4ZKg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\PHONENEW.WAV" size="25130">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>HtvwEsvjpGFJlFSn76kda6MCQ0M=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\prefergameofchess.wav" size="16820">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>n0+iE10I6175b8yOwrYQ339N4O0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\psychotic.wav" size="5010">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>cmQ9XvaI5/vlwRR/zkuplDWvzXI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\quickfgr.mp3" size="101145">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>OJejZF4FRZSxFszH9zx1qd+B8x0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\quit.wav" size="16992">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>+KjYewXEuWD2aXHYdqiv4gkEHeM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\quite_sure.wav" size="2930">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Xu0HVNeT7ZB3k+F52MpMQzkhOjQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\right_one.wav" size="14370">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Mpu0Ev/NrLUwFECMH3RPt67T9/g=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\rightdecision.wav" size="94912">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>8aeWlHs2W4iFjRKE7BEvNgvHP7A=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\shallweplayagame.wav" size="23394">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>yxitFAD7aEqwxm6vswbCYwSfXIA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\shrek_champion.wav" size="8390">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>ea5YAsZWi4aWvF8UW13/YhYkyPg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\SOUND1.WAV" size="55490">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>3+QdUak47PrhCbu8YaEjWR5Bsyc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\SOUND827.WAV" size="47230">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>MGiHgqh4LUGI5kgZjE/fH7a4c8g=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\start-end.mp3" size="275643">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>XMez6uVjvJZydiwv9vVBOLoslqw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\start-end.wav" size="6078010">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>uYVmwFNVUD/iZXsZ9JGHiurpCM8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\STARTUP.WAV" size="35820">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>+ukW1INWAPcZmIHZHcjzwK5JaHk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\stress_pill.wav" size="20090">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>dWCXj4W2l+QoulD9SyO9D/UNX7w=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\stripes_fact_jack.wav" size="4750">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>2dW2NZqNNECXdQBwGUNiVsvmOmE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\stupid_is.wav" size="5010">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>cXksBc5FRHupMBKWhaxvCdbfS5Y=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\stupid_not.wav" size="9430">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>cjAkQDcS/LmSxYGgUVBr2cSrv9A=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\t1_excellent.wav" size="2982">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>9ffbpMur0O50Lazdw0u3oCqs8GA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\t2_hasta_la_vista.wav" size="6830">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>gpTKipH9P5MUWs9gsIixLImUDnk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\taught_u_well.wav" size="8650">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>XkYD5D6q3YLslhEIzNQJe5QFRB0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\thankyoumrknowitall.wav" size="19726">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>KSRD7fNG0M41c95xab7va+Rc9H0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\thatiscorrect.wav" size="64044">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Kpj19mPCxjzrIw/kPG6WBaZT0rI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\thinkmusic.wav" size="715822">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>BgXIPuPQM5++ntTs1ybOR4krX3A=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\waitq11-15.wav" size="16719950">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>PC9AgzjT2t/Rwjs/W9u7T0dSn44=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\waitQ1-3.wav" size="44413006">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>4LDHs0ZFion+OdYUeq5Wa7zDzVI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\waitQ4-5.wav" size="10262606">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Z/s7djEiR0wlQnHa1RUppEqZPR8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\waitQ6-8.wav" size="16719950">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>PC9AgzjT2t/Rwjs/W9u7T0dSn44=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\waitq9-10.wav" size="10006606">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>8P2OMEiaVx5vA48uqfPwkZUYPUs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\war_games_play_a_game.wav" size="5790">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>HaLBDo8WXTtoPj2Wwdm9PByp0lE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\wide_wide_world.wav" size="10470">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>A7/nhDgrZv9TuCNJJPRoq62qqBo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\willy_wonka_you_lose.wav" size="11510">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>zSO39iY7Pup3cm0R9ZRlPEtwsc4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\winlight.mp3" size="78993">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>MgMy9nkfGUbfmVmkQHqPCH3dZQc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\winlight.wav" size="1741882">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Q6dhmGwPNZNyx93EiYY3w1EXWxE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\woe.wav" size="35170">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Fq+JkdWCflQ8DQCkOTZNGy8Umds=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\wronganswer.mp3" size="28838">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>hkhtw5LNRuvGg7X4lE9u13rFUkA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\wronganswer.wav" size="635962">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>O+f8+inquyyqX1KhOjcZVX8FLUE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\yahoo.wav" size="5110">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>diKPA9dNY62aXmj4p/yB8qlKSHA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\yeababyyea.wav" size="22104">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>MNNCaBCbK9N6xb5ym8KNMVZalNc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Release\YouGotIt.wav" size="2646">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>q+3qorUTexPT7TtmZW7Nc0VZJLI=</dsig:DigestValue>
+    </hash>
+  </file>
+</asmv1:assembly>

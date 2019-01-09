@@ -1,0 +1,320 @@
+[Root]
+Most Recent Package=MillionaireFake Setup
+
+
+[Package|Standard Setup Package 1|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=C:\Documents and Settings\Administrator\Desktop\ChristmasMillionaire\Package
+
+[Package|Standard Setup Package 1|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Standard Setup Package 1|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Standard Setup Package 1|Files Found]
+
+[Package|Standard Setup Package 1|Files Released]
+
+[Package|Standard Setup Package 1|Missing Dependency Information]
+C:\Program Files\Common Files\System\ado\msado20.tlb=
+
+[Package|Standard Setup Package 1|Out-of-Date Dependency Information]
+
+[Package|Standard Setup Package 1|Files Added]
+
+[Package|Standard Setup Package 1|Files Removed]
+
+[Package|Standard Setup Package 1|Files In Project]
+C:\Documents and Settings\Administrator\Desktop\ChristmasMillionaire\ChistmasMillionaire.exe=Yes
+C:\WINDOWS\system32\msvbvm60.dll=Yes
+C:\WINDOWS\system32\oleaut32.dll=Yes
+C:\WINDOWS\system32\olepro32.dll=Yes
+C:\WINDOWS\system32\asycfilt.dll=Yes
+C:\WINDOWS\system32\stdole2.tlb=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\Program Files\Common Files\System\ado\msado20.tlb=Yes
+C:\Program Files\Common Files\DESIGNER\MSDERUN.DLL=Yes
+C:\WINDOWS\system32\MSMAPI32.OCX=Yes
+C:\WINDOWS\system32\MCI32.OCX=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\WINDOWS\system32\VB6STKIT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+
+[Package|Standard Setup Package 1|Configure Registry Files]
+Applicable=No
+
+[Package|Standard Setup Package 1|Configure Remote Servers]
+Applicable=No
+
+[Package|Standard Setup Package 1|Install Locations]
+C:\Documents and Settings\Administrator\Desktop\ChristmasMillionaire\ChistmasMillionaire.exe=$(AppPath)
+C:\WINDOWS\system32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\oleaut32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\olepro32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\asycfilt.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\stdole2.tlb=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Common Files\System\ado\msado20.tlb=$(WinSysPath)
+C:\Program Files\Common Files\DESIGNER\MSDERUN.DLL=$(CommonFiles)\designer
+C:\WINDOWS\system32\MSMAPI32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\MCI32.OCX=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINDOWS\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+
+[Package|Standard Setup Package 1|Configure Shared Files]
+Applicable=Yes
+C:\Documents and Settings\Administrator\Desktop\ChristmasMillionaire\ChistmasMillionaire.exe=No
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=No
+
+[Package|Standard Setup Package 1|Distribution]
+Type=single
+Size=
+Title=Millionaire
+
+[Package|Standard Setup Package 1|IconGroups]
+Group0=Millionaire
+PrivateGroup0=True
+Parent0=$(Programs)
+
+[Package|Standard Setup Package 1|Millionaire]
+Icon1=ChistmasMillionaire.exe
+Title1=Millionaire
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|Standard Setup Package 1|Package]
+PackageFolder=C:\Documents and Settings\Administrator\Desktop\ChristmasMillionaire\Package
+ProjectFolder=C:\Documents and Settings\Administrator\Desktop\ChristmasMillionaire
+ServerSideCab=
+File1=C:\Documents and Settings\Administrator\Desktop\ChristmasMillionaire\Package\setup.exe
+File2=C:\Documents and Settings\Administrator\Desktop\ChristmasMillionaire\Package\Setup.Lst
+File3=C:\Documents and Settings\Administrator\Desktop\ChristmasMillionaire\Package\ChistmasMillionaire.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+[Package|MillionaireSetup|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=C:\Documents and Settings\Administrator\Desktop\ChristmasMillionaire\Package
+
+[Package|MillionaireSetup|Configure DAO ISAMs]
+Applicable=No
+
+[Package|MillionaireSetup|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|MillionaireSetup|Files Found]
+
+[Package|MillionaireSetup|Files Released]
+
+[Package|MillionaireSetup|Missing Dependency Information]
+C:\Program Files\Common Files\System\ado\msado20.tlb=
+
+[Package|MillionaireSetup|Out-of-Date Dependency Information]
+
+[Package|MillionaireSetup|Files Added]
+C:\Documents and Settings\Administrator\Desktop\ChristmasMillionaire\christianaire.mdb=
+
+[Package|MillionaireSetup|Files Removed]
+
+[Package|MillionaireSetup|Files In Project]
+C:\Documents and Settings\Administrator\Desktop\ChristmasMillionaire\ChistmasMillionaire.exe=Yes
+C:\WINDOWS\system32\msvbvm60.dll=Yes
+C:\WINDOWS\system32\oleaut32.dll=Yes
+C:\WINDOWS\system32\olepro32.dll=Yes
+C:\WINDOWS\system32\asycfilt.dll=Yes
+C:\WINDOWS\system32\stdole2.tlb=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\Program Files\Common Files\System\ado\msado20.tlb=Yes
+C:\Program Files\Common Files\DESIGNER\MSDERUN.DLL=Yes
+C:\WINDOWS\system32\MSMAPI32.OCX=Yes
+C:\WINDOWS\system32\MCI32.OCX=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\WINDOWS\system32\VB6STKIT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+C:\Documents and Settings\Administrator\Desktop\ChristmasMillionaire\christianaire.mdb=Yes
+
+[Package|MillionaireSetup|Configure Registry Files]
+Applicable=No
+
+[Package|MillionaireSetup|Configure Remote Servers]
+Applicable=No
+
+[Package|MillionaireSetup|Install Locations]
+C:\Documents and Settings\Administrator\Desktop\ChristmasMillionaire\ChistmasMillionaire.exe=$(AppPath)
+C:\WINDOWS\system32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\oleaut32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\olepro32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\asycfilt.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\stdole2.tlb=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Common Files\System\ado\msado20.tlb=$(WinSysPath)
+C:\Program Files\Common Files\DESIGNER\MSDERUN.DLL=$(CommonFiles)\designer
+C:\WINDOWS\system32\MSMAPI32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\MCI32.OCX=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINDOWS\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+C:\Documents and Settings\Administrator\Desktop\ChristmasMillionaire\christianaire.mdb=$(AppPath)
+
+[Package|MillionaireSetup|Configure Shared Files]
+Applicable=Yes
+C:\Documents and Settings\Administrator\Desktop\ChristmasMillionaire\ChistmasMillionaire.exe=No
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=No
+C:\Documents and Settings\Administrator\Desktop\ChristmasMillionaire\christianaire.mdb=No
+
+[Package|MillionaireSetup|Distribution]
+Type=single
+Size=
+Title=Millionaire
+
+[Package|MillionaireSetup|Package]
+PackageFolder=C:\Documents and Settings\Administrator\Desktop\ChristmasMillionaire\Package
+ProjectFolder=C:\Documents and Settings\Administrator\Desktop\ChristmasMillionaire
+ServerSideCab=
+File1=C:\Documents and Settings\Administrator\Desktop\ChristmasMillionaire\Package\setup.exe
+File2=C:\Documents and Settings\Administrator\Desktop\ChristmasMillionaire\Package\Setup.Lst
+File3=C:\Documents and Settings\Administrator\Desktop\ChristmasMillionaire\Package\ChistmasMillionaire.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+[Package|MillionaireSetup|IconGroups]
+Group0=Millionaire
+PrivateGroup0=True
+Parent0=$(Programs)
+
+[Package|MillionaireSetup|Millionaire]
+Icon1=ChistmasMillionaire.exe
+Title1=Millionaire
+StartIn1=$(AppPath)
+Key1=Icon1
+
+
+[Package|MillionaireFake Setup|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=F:\Users\Darsh\Downloads\18066\Millionaire\Package
+
+[Package|MillionaireFake Setup|Configure DAO ISAMs]
+Applicable=Yes
+Jet 2.x=Yes
+
+[Package|MillionaireFake Setup|Configure DAO ODBC]
+JetWorkspace=Yes
+ODBCDirect=Yes
+
+[Package|MillionaireFake Setup|Files Found]
+
+[Package|MillionaireFake Setup|Files Released]
+
+[Package|MillionaireFake Setup|Missing Dependency Information]
+
+[Package|MillionaireFake Setup|Out-of-Date Dependency Information]
+F:\Windows\System32\MSCOMCTL.OCX=
+
+[Package|MillionaireFake Setup|Files Added]
+
+[Package|MillionaireFake Setup|Files Removed]
+
+[Package|MillionaireFake Setup|Files In Project]
+F:\Users\Darsh\Downloads\18066\Millionaire\Millionaire.exe=Yes
+F:\Windows\System32\msvbvm60.dll=Yes
+F:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=Yes
+F:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=Yes
+F:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=Yes
+F:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=Yes
+F:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+F:\Program Files\Common Files\DESIGNER\MSDERUN.DLL=Yes
+F:\Program Files\Common Files\microsoft shared\DAO\DAO350.DLL=Yes
+F:\Windows\System32\MSJET35.DLL=Yes
+F:\Windows\System32\MSJTER35.DLL=Yes
+F:\Windows\System32\MSJINT35.DLL=Yes
+F:\Windows\System32\vbajet32.dll=Yes
+F:\Windows\System32\expsrv.dll=Yes
+F:\Windows\System32\MSRD2X35.DLL=Yes
+F:\Windows\System32\MSREPL35.DLL=Yes
+F:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MSVCRT40.DLL=Yes
+F:\Windows\System32\VB5DB.DLL=Yes
+F:\Windows\System32\MSCOMCTL.OCX=Yes
+F:\Windows\System32\MSRDO20.DLL=Yes
+F:\Windows\System32\RDOCURS.DLL=Yes
+F:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=Yes
+F:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+F:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+F:\Windows\System32\VB6STKIT.DLL=Yes
+F:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+
+[Package|MillionaireFake Setup|Configure Registry Files]
+Applicable=No
+
+[Package|MillionaireFake Setup|Configure Remote Servers]
+Applicable=No
+
+[Package|MillionaireFake Setup|Install Locations]
+F:\Users\Darsh\Downloads\18066\Millionaire\Millionaire.exe=$(AppPath)
+F:\Windows\System32\msvbvm60.dll=$(WinSysPathSysFile)
+F:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+F:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+F:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+F:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+F:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+F:\Program Files\Common Files\DESIGNER\MSDERUN.DLL=$(CommonFiles)\designer
+F:\Program Files\Common Files\microsoft shared\DAO\DAO350.DLL=$(MSDAOPath)
+F:\Windows\System32\MSJET35.DLL=$(WinSysPathSysFile)
+F:\Windows\System32\MSJTER35.DLL=$(WinSysPathSysFile)
+F:\Windows\System32\MSJINT35.DLL=$(WinSysPathSysFile)
+F:\Windows\System32\vbajet32.dll=$(WinSysPathSysFile)
+F:\Windows\System32\expsrv.dll=$(WinSysPathSysFile)
+F:\Windows\System32\MSRD2X35.DLL=$(WinSysPathSysFile)
+F:\Windows\System32\MSREPL35.DLL=$(WinSysPathSysFile)
+F:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MSVCRT40.DLL=$(WinSysPathSysFile)
+F:\Windows\System32\VB5DB.DLL=$(WinSysPath)
+F:\Windows\System32\MSCOMCTL.OCX=$(WinSysPath)
+F:\Windows\System32\MSRDO20.DLL=$(WinSysPath)
+F:\Windows\System32\RDOCURS.DLL=$(WinSysPath)
+F:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=$(AppPath)
+F:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+F:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+F:\Windows\System32\VB6STKIT.DLL=$(WinSysPathSysFile)
+F:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+
+[Package|MillionaireFake Setup|Configure Shared Files]
+Applicable=Yes
+F:\Users\Darsh\Downloads\18066\Millionaire\Millionaire.exe=No
+F:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=No
+
+[Package|MillionaireFake Setup|Distribution]
+Type=single
+Size=
+Title=Millionaire
+
+[Package|MillionaireFake Setup|IconGroups]
+Group0=Millionaire
+PrivateGroup0=-1
+Parent0=$(Programs)
+
+[Package|MillionaireFake Setup|Millionaire]
+Icon1=Millionaire.exe
+Title1=Millionaire
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|MillionaireFake Setup|Package]
+PackageFolder=F:\Users\Darsh\Downloads\18066\Millionaire\Package
+ProjectFolder=F:\Users\Darsh\Downloads\18066\Millionaire
+ServerSideCab=
+File1=F:\Users\Darsh\Downloads\18066\Millionaire\Package\setup.exe
+File2=F:\Users\Darsh\Downloads\18066\Millionaire\Package\Setup.Lst
+File3=F:\Users\Darsh\Downloads\18066\Millionaire\Package\Millionaire.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
