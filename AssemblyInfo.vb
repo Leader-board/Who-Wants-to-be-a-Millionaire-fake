@@ -11,8 +11,8 @@ Imports System.Runtime.InteropServices
 
 
 <Assembly: AssemblyTitle("MillionaireFake")>
-<Assembly: AssemblyDescription("This is the MillionaireFake quiz program , consisting of 5 sets of high quality questions")>
-<Assembly: AssemblyCompany("LTSI-ATLANTA")>
+<Assembly: AssemblyDescription("This is the MillionaireFake quiz program, consisting 8 sets of high quality questions")>
+<Assembly: AssemblyCompany("")>
 <Assembly: AssemblyProduct("MillionaireFake")>
 <Assembly: AssemblyCopyright("Not really")>
 <Assembly: AssemblyTrademark("")>
@@ -28,6 +28,6 @@ Imports System.Runtime.InteropServices
 ' You can specify all the values or you can default the Build and Revision Numbers
 ' by using the '*' as shown below:
 
-<Assembly: AssemblyVersion("0.6.*")>
+<Assembly: AssemblyVersion("0.9.*")>
 
 

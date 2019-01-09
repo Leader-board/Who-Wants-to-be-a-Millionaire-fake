@@ -25,9 +25,10 @@ Friend Class frmSorry
 		Dim lngReturn As Object
 		Dim lngRegion As Object
 		Dim lngFormHeight As Object
-		Dim lngFormWidth As Object
-		'UPGRADE_WARNING: Couldn't resolve default property of object lngFormWidth. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
-		lngFormWidth = VB6.PixelsToTwipsX(Me.Width) / VB6.TwipsPerPixelX
+        Dim lngFormWidth As Object
+        Label1.Text = "Sorry " + My.Settings.username
+        'UPGRADE_WARNING: Couldn't resolve default property of object lngFormWidth. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
+        lngFormWidth = VB6.PixelsToTwipsX(Me.Width) / VB6.TwipsPerPixelX
 		'UPGRADE_WARNING: Couldn't resolve default property of object lngFormHeight. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
 		lngFormHeight = VB6.PixelsToTwipsY(Me.Height) / VB6.TwipsPerPixelY
 		'UPGRADE_WARNING: Couldn't resolve default property of object lngFormHeight. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
@@ -41,17 +42,22 @@ Friend Class frmSorry
 		Label2.Text = "You have answered the question incorrectly. The correct answer is "
 		Label3.Text = correctans
 		If numQleft > 10 Then
-			Label4.Text = "You have collected a total of 0 points!"
-		ElseIf numQleft > 5 Then 
-			Label4.Text = "You have collected a total of 16 points!"
-		Else
-			Label4.Text = "You have collected a total of 512 points!"
-		End If
+            Label4.Text = "You have collected a total of 0 points!"
+        ElseIf numQleft > 5 Then
+            Label4.Text = "You have collected a total of 16 points!"
+            If (16 > My.Settings.highestscore) Then
+                My.Settings.highestscore = 16
+            End If
+        Else
+            Label4.Text = "You have collected a total of 512 points!"
+            If (512 > My.Settings.highestscore) Then
+                My.Settings.highestscore = 512
+            End If
+        End If
 		
 	End Sub
-	
-	
-	Private Sub Timer1_Tick(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles Timer1.Tick
+
+    Private Sub Timer1_Tick(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles Timer1.Tick
 		Dim soundname As Object 'timer is used to let form load before running this sync wave (which stops all other processes while it run.)
 		'timer inverval is set to 1000ms (1 second) in the properties,
 		' and is enabled upon form load.  form loads, the 1 sec later, this runs

@@ -10,26 +10,26 @@ Friend Class frmNumLeft
 	Private Sub Command4_Click(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles Command4.Click
 		Me.Close()
 	End Sub
-	
-	Private Sub frmNumLeft_Load(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles MyBase.Load
-		
-		Dim lngRegion As Integer
-		Dim lngReturn As Integer
-		Dim lngFormWidth As Integer
-		Dim lngFormHeight As Integer
-		
-		lngFormWidth = VB6.PixelsToTwipsX(Me.Width) / VB6.TwipsPerPixelX
-		lngFormHeight = VB6.PixelsToTwipsY(Me.Height) / VB6.TwipsPerPixelY
-		lngRegion = CreateEllipticRgn(0, 0, lngFormWidth, lngFormHeight)
-		lngReturn = SetWindowRgn(Me.Handle.ToInt32, lngRegion, True)
-		
-		If numQleft = 10 Then
-			Label1.Text = "You are 1/3 way there to becoming a Millionaire. You will get atleast 16 points!"
-			
-		End If
-		If numQleft = 5 Then
-			Label1.Text = "You are 2/3 way there to becoming a Millionaire. You will get atleast 512 points!"
-		End If
-		
-	End Sub
+
+    Private Sub frmNumLeft_Load(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles MyBase.Load
+
+        Dim lngRegion As Integer
+        Dim lngReturn As Integer
+        Dim lngFormWidth As Integer
+        Dim lngFormHeight As Integer
+
+        lngFormWidth = VB6.PixelsToTwipsX(Me.Width) / VB6.TwipsPerPixelX
+        lngFormHeight = VB6.PixelsToTwipsY(Me.Height) / VB6.TwipsPerPixelY
+        lngRegion = CreateEllipticRgn(0, 0, lngFormWidth, lngFormHeight)
+        lngReturn = SetWindowRgn(Me.Handle.ToInt32, lngRegion, True)
+
+        If numQleft = 10 Then
+            Label1.Text = "You are 1/3 way there to winning the game. You will get atleast 16 points!"
+
+        End If
+        If numQleft = 5 Then
+            Label1.Text = "You are 2/3 way there to winning the game. You will get atleast 512 points!"
+        End If
+
+    End Sub
 End Class

@@ -2,6 +2,7 @@
     Private Sub frmInternetLifeline_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         WebBrowser1.Navigate(urlString:="www.google.co.in")
         Millionaire.timTimer.Enabled = False
+        My.Settings.lifelinecounter = My.Settings.lifelinecounter + 1
     End Sub
     Private Sub WebBrowser1_ProgressChanged(sender As Object, e As WebBrowserProgressChangedEventArgs) Handles WebBrowser1.ProgressChanged
         If e.MaximumProgress <> 0 And e.MaximumProgress >= e.CurrentProgress Then

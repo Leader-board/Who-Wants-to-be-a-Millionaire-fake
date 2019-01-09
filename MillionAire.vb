@@ -16,13 +16,8 @@ Friend Class Millionaire
 	Public timebankcheck As Short
     Public timebanker As Short
     Dim SAPI
-    Private Sub goodgoing()
-    End Sub
-    Private Sub FinalAnswer()
-        ' We don't need it anymore.
-        'frmFinalAnswer.Show vbModal
-    End Sub
-    Private Sub audience()
+    Private Sub InternetLifeline()
+        '
         Call playSoundASYNC("sound827")
         timTimer.Enabled = True
         frmInternetLifeline.Show()
@@ -30,6 +25,7 @@ Friend Class Millionaire
 
     End Sub
     Private Sub congrats()
+        ' when the user has answered all questions
         Timer3.Enabled = True
         If numQleft = 10 Then
             Timer2.Enabled = True
@@ -46,6 +42,7 @@ Friend Class Millionaire
         End If
     End Sub
     Public Sub questionsLeft()
+        ' finding number of remaining questions
         Select Case qnum
             Case 1
                 numQleft = 14
@@ -84,26 +81,18 @@ Friend Class Millionaire
         Dim timebank As Integer
         qline1.Visible = True
         qline1.BringToFront()
-        'On Error GoTo errornote
-        'errornote: 
-        '		MsgBox("Sorry , the quiz machine has encountered an error. Please make sure that the program is correctly installed and that you're using the correct set.")
+
         doubleoption = 0
-        'UPGRADE_WARNING: Couldn't resolve default property of object timebank. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
+
         timebank = timebank + lblTimer.Text
         lblTimer.ForeColor = System.Drawing.ColorTranslator.FromOle(&H80000012)
         timTimer.Enabled = True
         progTimer.Visible = True
         lblTimer.Visible = True
         Image3.Image = System.Drawing.Image.FromFile(My.Application.Info.DirectoryPath & "\images\Scenery.jpg")
-        'If UCase(Mid(Text2.Text, 1, 9)) = "CHRISTMAS" Then
-        ' Picture1.Visible = True
-        ' Picture2.Visible = True
+
         isBiblical = False 'ignore this code except set biblical to false
-        'Else
-        '   Picture1.Visible = False
-        '   Picture2.Visible = False
-        '   isBiblical = True
-        'End If
+
         If doubleflag = 0 Then
             Image7.Visible = True
         Else
@@ -135,9 +124,6 @@ Friend Class Millionaire
                 Image6.Visible = True
                 Image13clicked = 0
             End If
-            'If numQleft > 15 Then
-            'Image7.Visible = True 'want to use double dip for every question
-            'End If
             Image15.Visible = False 'redlifelines--hide it
             Image11.Visible = False
             Image12.Visible = False
@@ -156,10 +142,11 @@ Friend Class Millionaire
                 progTimer.Maximum = CSng(lblTimer.Text)
             Else
                 If timebankcheck = 0 Then
+                    'default method
                     lblTimer.Text = "75"
                     progTimer.Maximum = CSng(lblTimer.Text)
                 Else
-                    'UPGRADE_WARNING: Couldn't resolve default property of object timebank. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
+                    ' if experimental timebank option is used
                     lblTimer.Text = "75" + timebank
                     progTimer.Maximum = CSng(lblTimer.Text)
                 End If
@@ -167,14 +154,15 @@ Friend Class Millionaire
 
             cmd = New ADODB.Command
             Call dbConnection() 'located in Module1
-            'UPGRADE_WARNING: Couldn't resolve default property of object cmd.ActiveConnection. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
+
             cmd.ActiveConnection = cnn
 
             X = CShort(Trim(CStr(Text1.Text)))
-            'UPGRADE_WARNING: Couldn't resolve default property of object cmd.CommandText. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
+
             cmd.CommandText = "select * from " & "disciple where gamenum = " & X & " and questnum= " & qnum + 1
-            'UPGRADE_WARNING: Couldn't resolve default property of object cmd.Execute. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
+
             curres = cmd.Execute()
+            ' redundant, disabled
             Label5.Text = curres.Fields("question").Value
             SAPI = CreateObject("SAPI.spvoice")
             If Command6.Text = "Self Play" Then
@@ -243,51 +231,48 @@ Friend Class Millionaire
     End Sub
 
     Private Sub Command2_Click(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles Command2.Click
-        Dim cmd As Object
-        Call getNumberOfGames()
-        qnum = 0
-        numQleft = 15
-        '  If gamenum < totNumGames Then
-        Text1.Text = CStr(CDbl(Text1.Text) + 1)
-        gamenum = gamenum + 1
-        Image15.Visible = True 'show redlifelines in bg for demonstrating lifelines
-        Image10.Visible = True 'threewisemen small icon
-        Image11.Visible = True
-        Image12.Visible = True
-        Image13.Visible = True
-        Image14.Visible = True
-
-        Dim curres As ADODB.Recordset
-        cmd = New ADODB.Command
-        Call dbConnection() 'located in Module1
-        'UPGRADE_WARNING: Couldn't resolve default property of object cmd.ActiveConnection. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
-        cmd.ActiveConnection = cnn
-        Dim m As Short
-        m = CShort(CStr(gamenum))
-        'UPGRADE_WARNING: Couldn't resolve default property of object cmd.CommandText. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
-        cmd.CommandText = "select gametype from " & "disciple where gamenum = " & m
-        'UPGRADE_WARNING: Couldn't resolve default property of object cmd.CommandType. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
-        cmd.CommandType = ADODB.CommandTypeEnum.adCmdText
-        'UPGRADE_WARNING: Couldn't resolve default property of object cmd.CommandTimeout. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
-        cmd.CommandTimeout = 15
-        'UPGRADE_WARNING: Couldn't resolve default property of object cmd.Execute. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
-        curres = cmd.Execute()
-        Text2.Text = curres.Fields("gametype").Value
-        cnn.Close()
-        Command1.Text = "Start"
-        Command1.Visible = True
-        Frame4.Visible = True
-        Image4.Visible = True
-        Image5.Visible = True
-        Image6.Visible = True
-        Image7.Visible = True
-        Image4.Enabled = False
-        Image5.Enabled = False
-        Image6.Enabled = False
-        Image7.Enabled = True
-        '  Else
-        '   MsgBox ("There are only " + Str(gamenum) + " Games in this Release")
-        ' End If
+        Try
+            Dim cmd As Object
+            Call getNumberOfGames()
+            qnum = 0
+            numQleft = 15
+            '  If gamenum < totNumGames Then
+            Text1.Text = CStr(CDbl(Text1.Text) + 1)
+            gamenum = gamenum + 1
+            Image15.Visible = True 'show redlifelines in bg for demonstrating lifelines
+            Image10.Visible = True
+            Image11.Visible = True
+            Image12.Visible = True
+            Image13.Visible = True
+            Image14.Visible = True
+            Dim curres As ADODB.Recordset
+            cmd = New ADODB.Command
+            Call dbConnection() 'located in Module1
+            cmd.ActiveConnection = cnn
+            Dim m As Short
+            m = CShort(CStr(gamenum))
+            cmd.CommandText = "select gametype from " & "disciple where gamenum = " & m
+            cmd.CommandType = ADODB.CommandTypeEnum.adCmdText
+            cmd.CommandTimeout = 15
+            curres = cmd.Execute()
+            Text2.Text = curres.Fields("gametype").Value
+            cnn.Close()
+            Command1.Text = "Start"
+            Command1.Visible = True
+            Frame4.Visible = True
+            Image4.Visible = True
+            Image5.Visible = True
+            Image6.Visible = True
+            Image7.Visible = True
+            Image4.Enabled = False
+            Image5.Enabled = False
+            Image6.Enabled = False
+            Image7.Enabled = True
+        Catch e As Exception
+            ' the initial method to detect number of games wasn't working properly, so an exception is used as the hook
+            MsgBox("Error detected: " + e.Message + " You might have reached the last available set.", MsgBoxStyle.Critical)
+            Text1.Text = Text1.Text - 1
+        End Try
     End Sub
     Private Sub getNumberOfGames()
         Dim X As Object
@@ -295,20 +280,13 @@ Friend Class Millionaire
         Dim curres As ADODB.Recordset
         cmd = New ADODB.Command
         Call dbConnection() 'located in Module1
-        'UPGRADE_WARNING: Couldn't resolve default property of object cmd.ActiveConnection. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
         cmd.ActiveConnection = cnn
-        'UPGRADE_WARNING: Couldn't resolve default property of object cmd.CommandText. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
         cmd.CommandText = "select gamenum from disciple"
-        'UPGRADE_WARNING: Couldn't resolve default property of object cmd.CommandType. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
         cmd.CommandType = ADODB.CommandTypeEnum.adCmdText
-        'UPGRADE_WARNING: Couldn't resolve default property of object cmd.CommandTimeout. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
         cmd.CommandTimeout = 15
-        'UPGRADE_WARNING: Couldn't resolve default property of object cmd.Execute. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
         curres = cmd.Execute()
         curres.MoveLast()
-        'UPGRADE_WARNING: Couldn't resolve default property of object X. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
         X = curres.Fields("gamenum").Value
-        'UPGRADE_WARNING: Couldn't resolve default property of object X. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
         totNumGames = X
         cnn.Close()
     End Sub
@@ -321,19 +299,13 @@ Friend Class Millionaire
         If gamenum <> 1 Then
             Text1.Text = CStr(CDbl(Text1.Text) - 1)
             gamenum = gamenum - 1
-
             cmd = New ADODB.Command
             Call dbConnection() 'located in Module1
-            'UPGRADE_WARNING: Couldn't resolve default property of object cmd.ActiveConnection. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
             cmd.ActiveConnection = cnn
             m = CShort(CStr(gamenum))
-            'UPGRADE_WARNING: Couldn't resolve default property of object cmd.CommandText. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
             cmd.CommandText = "select gametype from " & "disciple where gamenum = " & m
-            'UPGRADE_WARNING: Couldn't resolve default property of object cmd.CommandType. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
             cmd.CommandType = ADODB.CommandTypeEnum.adCmdText
-            'UPGRADE_WARNING: Couldn't resolve default property of object cmd.CommandTimeout. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
             cmd.CommandTimeout = 15
-            'UPGRADE_WARNING: Couldn't resolve default property of object cmd.Execute. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
             curres = cmd.Execute()
             Text2.Text = curres.Fields("gametype").Value
             cnn.Close()
@@ -355,20 +327,9 @@ Friend Class Millionaire
             Image13.Visible = True
             Image14.Visible = True
         Else
-            MsgBox("You are are the first game")
+            MsgBox("You are in the first game")
         End If
     End Sub
-    Private Sub Command4_Click(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles Command4.Click
-        If UCase(Mid(Text2.Text, 1, 9)) = "CHRISTMAS" Then
-
-            isBiblical = False
-        Else
-
-            isBiblical = True
-        End If
-        FastestFinger.ShowDialog()
-    End Sub
-
     Private Sub Command5_Click(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles Command5.Click
         Call playSoundASYNC("start-end")
     End Sub
@@ -384,6 +345,7 @@ Friend Class Millionaire
     End Sub
 
     Private Sub Millionaire_Load(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles MyBase.Load
+        My.Settings.programlaunchcounter = My.Settings.programlaunchcounter + 1
         timebanker = 0
         timebankcheck = 0
         qnum = 0
@@ -395,13 +357,6 @@ Friend Class Millionaire
         Frame4.Height = VB6.TwipsToPixelsY(3450)
         Frame4.Width = VB6.TwipsToPixelsX(14415)
         Frame4.Top = VB6.TwipsToPixelsY(7560)
-        'Picture2.Height = 2420
-        'Picture2.Width = 4020
-        'Picture2.Top = 6360
-        'Picture2.Left = 10800
-        'Picture1.Height = 3072
-        'Picture1.Width = 10620
-        'Picture1.Left = 240
         livePlay = True
         Image11clicked = 0
         Image12clicked = 0
@@ -410,21 +365,16 @@ Friend Class Millionaire
         doubleflag = 0
         Call playSoundSYNC("war_games_play_a_game")
         Call playSoundASYNC("start-end")
+        frmHelp.Show()
     End Sub
     Private Sub playSoundASYNC(ByRef soundFile As Object)
         Dim soundname As Object
-        'UPGRADE_WARNING: Couldn't resolve default property of object soundFile. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
-        'UPGRADE_WARNING: Couldn't resolve default property of object soundname. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
         soundname = My.Application.Info.DirectoryPath & "\" + soundFile + ".wav"
-        'UPGRADE_WARNING: Couldn't resolve default property of object soundname. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
         gbResults = PlaySound(soundname, 0, SND_ASYNC)
     End Sub
     Private Sub playSoundSYNC(ByRef soundFile As Object)
         Dim soundname As Object
-        'UPGRADE_WARNING: Couldn't resolve default property of object soundFile. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
-        'UPGRADE_WARNING: Couldn't resolve default property of object soundname. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
         soundname = My.Application.Info.DirectoryPath & "\" + soundFile + ".wav"
-        'UPGRADE_WARNING: Couldn't resolve default property of object soundname. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
         gbResults = PlaySound(soundname, 0, SND_SYNC)
     End Sub
     Private Sub Image11_Click(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles Image11.Click
@@ -471,37 +421,38 @@ Friend Class Millionaire
         End If
     End Sub
     Private Sub Image4_Click(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles Image4.Click
-        Dim myValue2 As Object
-        Dim z As Object
+        Dim myValue2 As Integer
+        Dim z As Integer
         If Image4clicked = 0 Then
             Image4.Visible = False 'hide this image
+            My.Settings.lifelinecounter = My.Settings.lifelinecounter + 1
             Call playSoundSYNC("sound827")
             'stop timer
             Select Case correctans
                 Case "A"
-                    'UPGRADE_WARNING: Couldn't resolve default property of object z. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
+
                     z = 1
                 Case "B"
-                    'UPGRADE_WARNING: Couldn't resolve default property of object z. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
+
                     z = 2
                 Case "C"
-                    'UPGRADE_WARNING: Couldn't resolve default property of object z. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
+
                     z = 3
                 Case "D"
-                    'UPGRADE_WARNING: Couldn't resolve default property of object z. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
+
                     z = 4
             End Select
             myValue = Int((4 * Rnd()) + 1)
-            'UPGRADE_WARNING: Couldn't resolve default property of object z. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
+
             Do Until myValue <> z
                 myValue = Int((4 * Rnd()) + 1)
             Loop
-            'UPGRADE_WARNING: Couldn't resolve default property of object myValue2. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
+
             myValue2 = Int((4 * Rnd()) + 1)
-            'UPGRADE_WARNING: Couldn't resolve default property of object z. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
-            'UPGRADE_WARNING: Couldn't resolve default property of object myValue2. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
+
+
             Do Until myValue2 <> myValue And myValue2 <> z
-                'UPGRADE_WARNING: Couldn't resolve default property of object myValue2. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
+
                 myValue2 = Int((4 * Rnd()) + 1)
             Loop
             ' continue the music immediately after the 50:50 music has played.
@@ -543,48 +494,41 @@ Friend Class Millionaire
     Private Sub Image5_Click(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles Image5.Click
         Call playSoundASYNC("sound827")
         timTimer.Enabled = False
+        My.Settings.lifelinecounter = My.Settings.lifelinecounter + 1
         frmPhoneAFriend.ShowDialog()
         Image5.Visible = False 'hide this image
     End Sub
 
     Private Sub Image6_Click(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles Image6.Click
-        Call audience()
+        Call InternetLifeline()
     End Sub
 
     Private Sub Image7_Click(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles Image7.Click 'this is AskTheExperts-- now DoubeDip
         Call playSoundASYNC("ddipmus")
         doubleflag = 1
+        My.Settings.lifelinecounter = My.Settings.lifelinecounter + 1
         Image7.Visible = False
         doubleoption = 1
         Image7.Visible = False
-    End Sub
-    Private Sub Image9_DoubleClick(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles Image9.DoubleClick
-        If timebankcheck = 0 Then
-            timebankcheck = 1
-            MsgBox("Banked time enabled. Q15 will have extended time")
-        Else
-            timebankcheck = 0
-            MsgBox("Banked time disabled. Q15 will have 75 seconds time")
-        End If
     End Sub
     Private Sub Label1_Click(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles Label1.Click
         Dim ans As Object
         If Label1.Text <> "" Then
             labelclicked = "A"
-            'UPGRADE_WARNING: Couldn't resolve default property of object ans. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
+
             If ans <> 7 Then
                 If correctans = labelclicked Then
                     Label1.BackColor = System.Drawing.ColorTranslator.FromOle(RGB(0, 200, 0))
                     Call playSoundASYNC("cormusic")
                     Call questionsLeft()
-                    Call goodgoing()
+
                     Call congrats()
                 ElseIf doubleoption = 1 Then
                     If correctans = labelclicked Then
                         Label1.BackColor = System.Drawing.ColorTranslator.FromOle(RGB(0, 200, 0))
                         Call playSoundASYNC("cormusic")
                         Call questionsLeft()
-                        Call goodgoing()
+
                         Call congrats()
                     Else
                         timTimer.Enabled = True
@@ -628,9 +572,6 @@ Friend Class Millionaire
             Label1.BackColor = System.Drawing.ColorTranslator.FromOle(RGB(255, 255, 255))
         End If
     End Sub
-
-
-
     Private Sub Label1_MouseDown(ByVal eventSender As System.Object, ByVal eventArgs As System.Windows.Forms.MouseEventArgs) Handles Label1.MouseDown
         Dim Button As Short = eventArgs.Button \ &H100000
         Dim Shift As Short = System.Windows.Forms.Control.ModifierKeys \ &H10000
@@ -647,9 +588,9 @@ Friend Class Millionaire
     Private Sub btnQuit_Click(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs)
         Dim uQuit As Object
         Call playSoundASYNC("quit")
-        'UPGRADE_WARNING: Couldn't resolve default property of object uQuit. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
+
         uQuit = MsgBox("Do you really want to quit now.......?", MsgBoxStyle.YesNo, "Millionaire!")
-        'UPGRADE_WARNING: Couldn't resolve default property of object uQuit. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
+
         If uQuit = 6 Then
             MsgBox("You have collected a total of", MsgBoxStyle.Information, "You've quit!")
             MsgBox(2 ^ (14 - numQleft))
@@ -658,23 +599,23 @@ Friend Class Millionaire
         End If
     End Sub
     Private Sub Label2_Click(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles Label2.Click
-        Dim ans As Object
+        Dim ans As Integer
         If Label2.Text <> "" Then
             labelclicked = "B"
-            'UPGRADE_WARNING: Couldn't resolve default property of object ans. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
+
             If ans <> 7 Then
                 If correctans = labelclicked Then
                     Label2.BackColor = System.Drawing.ColorTranslator.FromOle(RGB(0, 200, 0))
                     Call playSoundASYNC("cormusic")
                     Call questionsLeft()
-                    Call goodgoing()
+
                     Call congrats()
                 ElseIf doubleoption = 1 Then
                     If correctans = labelclicked Then
                         Label1.BackColor = System.Drawing.ColorTranslator.FromOle(RGB(0, 200, 0))
                         Call playSoundASYNC("cormusic")
                         Call questionsLeft()
-                        Call goodgoing()
+
                         Call congrats()
                     Else
                         Call playSoundASYNC("ddipinc")
@@ -735,20 +676,20 @@ Friend Class Millionaire
         Dim ans As Object
         If Label3.Text <> "" Then
             labelclicked = "C"
-            'UPGRADE_WARNING: Couldn't resolve default property of object ans. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
+
             If ans <> 7 Then
                 If correctans = labelclicked Then
                     Label3.BackColor = System.Drawing.ColorTranslator.FromOle(RGB(0, 200, 0))
                     Call playSoundASYNC("cormusic")
                     Call questionsLeft()
-                    Call goodgoing()
+
                     Call congrats()
                 ElseIf doubleoption = 1 Then
                     If correctans = labelclicked Then
                         Label3.BackColor = System.Drawing.ColorTranslator.FromOle(RGB(0, 200, 0))
                         Call playSoundASYNC("cormusic")
                         Call questionsLeft()
-                        Call goodgoing()
+
                         Call congrats()
                     Else
                         timTimer.Enabled = True
@@ -812,20 +753,20 @@ Friend Class Millionaire
 
         If Label4.Text <> "" Then
             labelclicked = "D"
-            'UPGRADE_WARNING: Couldn't resolve default property of object ans. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
+
             If ans <> 7 Then
                 If correctans = labelclicked Then
                     Label4.BackColor = System.Drawing.ColorTranslator.FromOle(RGB(0, 200, 0))
                     Call playSoundASYNC("cormusic")
                     Call questionsLeft()
-                    Call goodgoing()
+
                     Call congrats()
                 ElseIf doubleoption = 1 Then
                     If correctans = labelclicked Then
                         Label4.BackColor = System.Drawing.ColorTranslator.FromOle(RGB(0, 200, 0))
                         Call playSoundASYNC("cormusic")
                         Call questionsLeft()
-                        Call goodgoing()
+
                         Call congrats()
                     Else
                         timTimer.Enabled = True
@@ -919,36 +860,17 @@ Friend Class Millionaire
         lblTimer.Text = CStr(CDbl(lblTimer.Text) - 1)
         progTimer.Value = CSng(lblTimer.Text)
         If CDbl(lblTimer.Text) = 0 Then
-            MsgBox("Timer exploded")
+            MsgBox("Time's up, sorry" + MsgBoxStyle.Exclamation)
             timTimer.Enabled = False
+            If (numQleft < 15) Then
+                MsgBox("You have correctly answered " + 15 - numQleft + "questions and have received " + 2 ^ (15 - numQleft) + " points")
+            Else
+                MsgBox("You have correctly answered " + 0 + "questions and have received " + 0 + " points")
+            End If
+            If (2 ^ (14 - numQleft) > My.Settings.highestscore) Then
+                My.Settings.highestscore = 2 ^ (14 - numQleft)
+            End If
             ' Repeat form loading proceedures
-            isBiblical = True
-            qnum = 0
-            Image4clicked = 0
-            numQleft = 15
-            gamenum = 1
-            gamenumber = 1 'global for ff form
-            Frame4.Left = VB6.TwipsToPixelsX(105)
-            Frame4.Height = VB6.TwipsToPixelsY(3450)
-            Frame4.Width = VB6.TwipsToPixelsX(14415)
-            Frame4.Top = VB6.TwipsToPixelsY(7560)
-            'Picture2.Height = 2420
-            'Picture2.Width = 4020
-            'Picture2.Top = 6360
-            'Picture2.Left = 10800
-            'Picture1.Height = 3072
-            'Picture1.Width = 10620
-            'Picture1.Left = 240
-            livePlay = True
-            Image11clicked = 0
-            Image12clicked = 0
-            Image13clicked = 0
-            Image14clicked = 0
-            Frame4.Visible = Enabled
-            progTimer.Enabled = False
-            lblTimer.Enabled = False
-            Command1.Visible = True
-            progTimer.ForeColor = System.Drawing.ColorTranslator.FromOle(11111111)
         ElseIf CDbl(lblTimer.Text) < 5 Then
             lblTimer.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFF)
             progTimer.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFF)
@@ -959,16 +881,28 @@ Friend Class Millionaire
     End Sub
     Private Sub btnQuit_Click_1(sender As Object, e As EventArgs) Handles btnQuit.Click
         ' recopied from original btnQuit_Click due to VS having some problem recognising that one.
-        Dim uQuit As Object
-        Call playSoundASYNC("quit")
-        'UPGRADE_WARNING: Couldn't resolve default property of object uQuit. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
-        uQuit = MsgBox("Do you really want to quit now.......?", MsgBoxStyle.YesNo, "Millionaire!")
-        'UPGRADE_WARNING: Couldn't resolve default property of object uQuit. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
-        If uQuit = 6 Then
-            MsgBox("You have collected a total of", MsgBoxStyle.Information, "You've quit!")
-            MsgBox(2 ^ (14 - numQleft))
-            MsgBox("points!")
-            Me.Close()
+        If doubleoption = 1 Then
+            MsgBox("You cannot quit the game when Double Dip has started. You must finish the question before quitting if you so wish.", MsgBoxStyle.Critical, "Can't quit!")
+        Else
+            Dim uQuit As Object
+            Call playSoundASYNC("quit")
+
+            uQuit = MsgBox("Do you really want to quit now.......?", MsgBoxStyle.YesNo, "Millionaire!")
+
+            If uQuit = 6 Then
+                MsgBox("You have collected a total of " + Str(2 ^ (14 - numQleft)) + " points!", MsgBoxStyle.Information, "You've quit!")
+                If (2 ^ (14 - numQleft) > My.Settings.highestscore) Then
+                    My.Settings.highestscore = 2 ^ (14 - numQleft)
+                End If
+                Me.Close()
+            End If
         End If
     End Sub
+
+    Private Sub Image3_Click(sender As Object, e As EventArgs) Handles Image3.Click
+        ' view statistics
+        frmOptions.ShowDialog()
+    End Sub
+
+
 End Class

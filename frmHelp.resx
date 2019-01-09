@@ -135,10 +135,13 @@ The quiz has 4 lifelines, which are aids that are designed to help you when you'
 
 1 - 50:50 lifeline:- In this lifeline, two incorrect options are removed by the program, leaving you with two options to choose from, of which only one is correct.
 2 - Phone-A-Friend:- Call someone and ask them to help you within 30 seconds.
-3 - Internet Lifeline:- The program will open a browser, and you should search the Internet and find the answer within 35 seconds. The browser will automatically close when the time is reached. Internet access is required for this lifeline.
+3 - Internet Lifeline:- The program will open a browser, and you should search the Internet and find the answer within 40 seconds. The browser will automatically close when the time is reached. Internet access is required for this lifeline.
 4 - Double Dip:- In this lifeline, you can choose another option if your first option chosen is incorrect. You should select your first answer, and if incorrect, the program will inform you. If correct, you continue to the next question. The lifeline is NOT institated if both options are not needed. Quitting the game is not allowed once this lifeline is chosen (only for that question).
 
 You are allowed to choose multiple lifelines at once, but the 50:50 and Double-Dip lifelines cannot be used simultaneously.
-</value>
+
+It is possible to find out common stats like the highest score etc by clicking the main image.
+
+Version 0.9</value>
   </data>
 </root>

@@ -1,5 +1,6 @@
 Option Strict Off
 Option Explicit On
+' core global module
 Module Module1
 	Public TEAMNAME As String
 	Public NumberIncorrect As Short

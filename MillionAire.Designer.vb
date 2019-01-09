@@ -48,7 +48,6 @@
     Public WithEvents Image11 As System.Windows.Forms.PictureBox
     Public WithEvents Image15 As System.Windows.Forms.PictureBox
     Public WithEvents Frame7 As System.Windows.Forms.Panel
-    Public WithEvents Command4 As System.Windows.Forms.Button
     Public WithEvents Image8 As System.Windows.Forms.PictureBox
     Public WithEvents Frame4 As System.Windows.Forms.GroupBox
     Public WithEvents Timer3 As System.Windows.Forms.Timer
@@ -66,8 +65,6 @@
     Public WithEvents Frame2 As System.Windows.Forms.Panel
     Public WithEvents lblTimer As System.Windows.Forms.Label
     Public WithEvents OLE1 As System.Windows.Forms.Label
-    Public WithEvents Shape6 As Microsoft.VisualBasic.PowerPacks.RectangleShape
-    Public WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.
     'Do not modify it using the code editor.
@@ -125,7 +122,6 @@
         Me.timDdip = New System.Windows.Forms.Timer(Me.components)
         Me.timTimer = New System.Windows.Forms.Timer(Me.components)
         Me.Frame4 = New System.Windows.Forms.GroupBox()
-        Me.Command4 = New System.Windows.Forms.Button()
         Me.Image8 = New System.Windows.Forms.PictureBox()
         Me.Frame2 = New System.Windows.Forms.Panel()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -369,7 +365,7 @@
         '
         Me.progProgress.Location = New System.Drawing.Point(3, 77)
         Me.progProgress.Name = "progProgress"
-        Me.progProgress.Size = New System.Drawing.Size(256, 24)
+        Me.progProgress.Size = New System.Drawing.Size(250, 24)
         Me.progProgress.Style = System.Windows.Forms.ProgressBarStyle.Continuous
         Me.progProgress.TabIndex = 0
         '
@@ -493,17 +489,17 @@
         Me.Label21.Location = New System.Drawing.Point(86, 132)
         Me.Label21.Name = "Label21"
         Me.Label21.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label21.Size = New System.Drawing.Size(422, 98)
+        Me.Label21.Size = New System.Drawing.Size(422, 47)
         Me.Label21.TabIndex = 31
-        Me.Label21.Text = "Who Wants To Be A Millionaire?"
+        Me.Label21.Text = "MillionaireFake!"
         '
         'Image3
         '
         Me.Image3.Cursor = System.Windows.Forms.Cursors.Default
         Me.Image3.Image = CType(resources.GetObject("Image3.Image"), System.Drawing.Image)
-        Me.Image3.Location = New System.Drawing.Point(11, 19)
+        Me.Image3.Location = New System.Drawing.Point(3, 11)
         Me.Image3.Name = "Image3"
-        Me.Image3.Size = New System.Drawing.Size(651, 282)
+        Me.Image3.Size = New System.Drawing.Size(659, 290)
         Me.Image3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.Image3.TabIndex = 34
         Me.Image3.TabStop = False
@@ -523,6 +519,7 @@
         'Frame7
         '
         Me.Frame7.BackColor = System.Drawing.Color.Black
+        Me.Frame7.Controls.Add(Me.btnQuit)
         Me.Frame7.Controls.Add(Me.btnHelp)
         Me.Frame7.Controls.Add(Me.Text1)
         Me.Frame7.Controls.Add(Me.Command2)
@@ -551,12 +548,14 @@
         '
         'btnQuit
         '
-        Me.btnQuit.Location = New System.Drawing.Point(892, 603)
+        Me.btnQuit.BackColor = System.Drawing.Color.Red
+        Me.btnQuit.ForeColor = System.Drawing.SystemColors.Control
+        Me.btnQuit.Location = New System.Drawing.Point(591, 23)
         Me.btnQuit.Name = "btnQuit"
         Me.btnQuit.Size = New System.Drawing.Size(114, 33)
         Me.btnQuit.TabIndex = 36
         Me.btnQuit.Text = "Quit Game"
-        Me.btnQuit.UseVisualStyleBackColor = True
+        Me.btnQuit.UseVisualStyleBackColor = False
         '
         'btnHelp
         '
@@ -803,7 +802,6 @@
         'Frame4
         '
         Me.Frame4.BackColor = System.Drawing.Color.Black
-        Me.Frame4.Controls.Add(Me.Command4)
         Me.Frame4.Controls.Add(Me.Image8)
         Me.Frame4.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Frame4.Location = New System.Drawing.Point(784, 544)
@@ -813,21 +811,6 @@
         Me.Frame4.Size = New System.Drawing.Size(57, 118)
         Me.Frame4.TabIndex = 9
         Me.Frame4.TabStop = False
-        '
-        'Command4
-        '
-        Me.Command4.BackColor = System.Drawing.SystemColors.Control
-        Me.Command4.Cursor = System.Windows.Forms.Cursors.Default
-        Me.Command4.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Command4.Image = CType(resources.GetObject("Command4.Image"), System.Drawing.Image)
-        Me.Command4.Location = New System.Drawing.Point(415, 187)
-        Me.Command4.Name = "Command4"
-        Me.Command4.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Command4.Size = New System.Drawing.Size(160, 25)
-        Me.Command4.TabIndex = 10
-        Me.Command4.Text = "Fastest Finger"
-        Me.Command4.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Command4.UseVisualStyleBackColor = False
         '
         'Image8
         '
@@ -1367,11 +1350,11 @@
         '
         'Millionaire
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 14.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
+        Me.AutoSize = True
         Me.BackColor = System.Drawing.Color.Black
         Me.ClientSize = New System.Drawing.Size(1087, 727)
-        Me.Controls.Add(Me.btnQuit)
         Me.Controls.Add(Me.progTimer)
         Me.Controls.Add(Me.Image9)
         Me.Controls.Add(Me.Picture2)
@@ -1385,7 +1368,9 @@
         Me.Controls.Add(Me.ShapeContainer1)
         Me.Cursor = System.Windows.Forms.Cursors.Default
         Me.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Location = New System.Drawing.Point(4, 23)
+        Me.MaximizeBox = False
         Me.Name = "Millionaire"
         Me.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -1420,49 +1405,7 @@
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents qline1 As PowerPacks.LineShape
-    Friend WithEvents ShapeContainer4 As PowerPacks.ShapeContainer
-    Friend WithEvents LineShape8 As PowerPacks.LineShape
-    Friend WithEvents LineShape7 As PowerPacks.LineShape
-    Friend WithEvents LineShape6 As PowerPacks.LineShape
-    Friend WithEvents LineShape5 As PowerPacks.LineShape
-    Friend WithEvents LineShape4 As PowerPacks.LineShape
-    Friend WithEvents LineShape3 As PowerPacks.LineShape
-    Friend WithEvents LineShape2 As PowerPacks.LineShape
-    Friend WithEvents LineShape1 As PowerPacks.LineShape
-    Friend WithEvents LineShape12 As PowerPacks.LineShape
-    Friend WithEvents LineShape11 As PowerPacks.LineShape
-    Friend WithEvents LineShape10 As PowerPacks.LineShape
-    Friend WithEvents LineShape9 As PowerPacks.LineShape
-    Friend WithEvents LineShape16 As PowerPacks.LineShape
-    Friend WithEvents LineShape15 As PowerPacks.LineShape
-    Friend WithEvents LineShape14 As PowerPacks.LineShape
-    Friend WithEvents LineShape13 As PowerPacks.LineShape
-    Friend WithEvents LineShape37 As PowerPacks.LineShape
-    Friend WithEvents LineShape36 As PowerPacks.LineShape
-    Friend WithEvents LineShape35 As PowerPacks.LineShape
-    Friend WithEvents LineShape34 As PowerPacks.LineShape
-    Friend WithEvents LineShape33 As PowerPacks.LineShape
-    Friend WithEvents LineShape32 As PowerPacks.LineShape
-    Friend WithEvents LineShape31 As PowerPacks.LineShape
-    Friend WithEvents LineShape30 As PowerPacks.LineShape
-    Friend WithEvents LineShape29 As PowerPacks.LineShape
-    Friend WithEvents LineShape28 As PowerPacks.LineShape
-    Friend WithEvents LineShape27 As PowerPacks.LineShape
-    Friend WithEvents LineShape26 As PowerPacks.LineShape
-    Friend WithEvents LineShape25 As PowerPacks.LineShape
-    Friend WithEvents LineShape24 As PowerPacks.LineShape
-    Friend WithEvents LineShape23 As PowerPacks.LineShape
-    Friend WithEvents LineShape22 As PowerPacks.LineShape
-    Friend WithEvents LineShape21 As PowerPacks.LineShape
-    Friend WithEvents LineShape20 As PowerPacks.LineShape
-    Friend WithEvents LineShape19 As PowerPacks.LineShape
-    Friend WithEvents LineShape18 As PowerPacks.LineShape
-    Friend WithEvents LineShape17 As PowerPacks.LineShape
     Public WithEvents btnHelp As Label
-    Public WithEvents ShapeContainer2 As PowerPacks.ShapeContainer
-    Friend WithEvents OvalShape1 As PowerPacks.OvalShape
-    Public WithEvents Shape4 As PowerPacks.RectangleShape
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Label10 As Label
     Friend WithEvents lblQcorr As Label
@@ -1471,9 +1414,53 @@
     Friend WithEvents progProgress As ProgressBar
     Friend WithEvents lblQTot As Label
     Friend WithEvents lblcurQNo As Label
-    Friend WithEvents LineShape38 As PowerPacks.LineShape
     Friend WithEvents progTimer As ProgressBar
     Friend WithEvents Label14 As Label
     Friend WithEvents btnQuit As Button
+    Private WithEvents Shape6 As PowerPacks.RectangleShape
+    Private WithEvents ShapeContainer1 As PowerPacks.ShapeContainer
+    Private WithEvents qline1 As PowerPacks.LineShape
+    Private WithEvents ShapeContainer4 As PowerPacks.ShapeContainer
+    Private WithEvents LineShape8 As PowerPacks.LineShape
+    Private WithEvents LineShape7 As PowerPacks.LineShape
+    Private WithEvents LineShape6 As PowerPacks.LineShape
+    Private WithEvents LineShape5 As PowerPacks.LineShape
+    Private WithEvents LineShape4 As PowerPacks.LineShape
+    Private WithEvents LineShape3 As PowerPacks.LineShape
+    Private WithEvents LineShape2 As PowerPacks.LineShape
+    Private WithEvents LineShape1 As PowerPacks.LineShape
+    Private WithEvents LineShape12 As PowerPacks.LineShape
+    Private WithEvents LineShape11 As PowerPacks.LineShape
+    Private WithEvents LineShape10 As PowerPacks.LineShape
+    Private WithEvents LineShape9 As PowerPacks.LineShape
+    Private WithEvents LineShape16 As PowerPacks.LineShape
+    Private WithEvents LineShape15 As PowerPacks.LineShape
+    Private WithEvents LineShape14 As PowerPacks.LineShape
+    Private WithEvents LineShape13 As PowerPacks.LineShape
+    Private WithEvents LineShape37 As PowerPacks.LineShape
+    Private WithEvents LineShape36 As PowerPacks.LineShape
+    Private WithEvents LineShape35 As PowerPacks.LineShape
+    Private WithEvents LineShape34 As PowerPacks.LineShape
+    Private WithEvents LineShape33 As PowerPacks.LineShape
+    Private WithEvents LineShape32 As PowerPacks.LineShape
+    Private WithEvents LineShape31 As PowerPacks.LineShape
+    Private WithEvents LineShape30 As PowerPacks.LineShape
+    Private WithEvents LineShape29 As PowerPacks.LineShape
+    Private WithEvents LineShape28 As PowerPacks.LineShape
+    Private WithEvents LineShape27 As PowerPacks.LineShape
+    Private WithEvents LineShape26 As PowerPacks.LineShape
+    Private WithEvents LineShape25 As PowerPacks.LineShape
+    Private WithEvents LineShape24 As PowerPacks.LineShape
+    Private WithEvents LineShape23 As PowerPacks.LineShape
+    Private WithEvents LineShape22 As PowerPacks.LineShape
+    Private WithEvents LineShape21 As PowerPacks.LineShape
+    Private WithEvents LineShape20 As PowerPacks.LineShape
+    Private WithEvents LineShape19 As PowerPacks.LineShape
+    Private WithEvents LineShape18 As PowerPacks.LineShape
+    Private WithEvents LineShape17 As PowerPacks.LineShape
+    Private WithEvents ShapeContainer2 As PowerPacks.ShapeContainer
+    Private WithEvents OvalShape1 As PowerPacks.OvalShape
+    Private WithEvents Shape4 As PowerPacks.RectangleShape
+    Private WithEvents LineShape38 As PowerPacks.LineShape
 #End Region
 End Class

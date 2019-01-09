@@ -106,7 +106,7 @@
         Me.Label1.Location = New System.Drawing.Point(52, 13)
         Me.Label1.Name = "Label1"
         Me.Label1.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label1.Size = New System.Drawing.Size(519, 44)
+        Me.Label1.Size = New System.Drawing.Size(539, 44)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "C O N G R A T U L A T I O N S"
         '
