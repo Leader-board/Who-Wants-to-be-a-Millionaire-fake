@@ -2,22 +2,22 @@
 A program that tries to emulate the popular quiz show "Who Wants to be a Millionaire". Includes multiple sets with different questions for each set.
 
 The rumtime version (an installer) can be downloaded from https://dm282.host.cs.st-andrews.ac.uk/millionairefake/setup.exe.
-As always, feedback about the program (or especially the questions) is always welcome.
+As always, feedback about the program (or especially the questions) are always welcome.
 
-*The soundtack and logo may not be original - copyright applies to them and fair use is assued for usage of the same.*
+*The soundtack and logo may not be original - copyright applies to them and fair use is assued for usage of the same.* Everything else is licensed under CC 4.0 SA NC. 
 
-Information about the design of the questions and explanations for some answers is available in the questionhandbook.pdf file.
+Information about the design of the questions and explanation for some answers is available in the questionhandbook.pdf file.
 
 # The V0.9 update
 
 Several improvements were made to this release.
 
 1. Set 8 was added.
-2. Several questions were changed (see questionhandbook.pdf)
+2. Several questions were changed (see questionhandbook.pdf).
 3. The Stats section is now enabled and can be launched by clicking the main image.
-4. A bit more personal - the name is now requested from the user at every launched.
+4. A bit more personal - the name is now requested from the user at every launch.
 5. Internal code improvements: unwanted forms were removed.
-6. This is the first relesae which can be directly installed through an EXE: this is currently located at https://dm282.host.cs.st-andrews.ac.uk/millionairefake/setup.exe
+6. This is the first release which can be directly installed through an EXE: this is currently located at https://dm282.host.cs.st-andrews.ac.uk/millionairefake/setup.exe (update: there is a potential bug which may mean that the assets aren't copied, meaning that the program won't launch)
 7. The GitHub repositery now includes the run-time files.
 
 The rest of this readme is copied from the Help section which is seen on every program launch.
