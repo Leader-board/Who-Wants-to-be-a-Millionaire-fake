@@ -1,19 +1,18 @@
 Option Strict Off
 Option Explicit On
-Imports Microsoft.VisualBasic.PowerPacks
 Friend Class Millionaire
-	Inherits System.Windows.Forms.Form
-	
-	Public myValue As Short
-	Public Image4clicked As Short
-	Public Image11clicked As Short
-	Public Image12clicked As Short
-	Public Image13clicked As Short
-	Public Image14clicked As Short
-	Public gamenum As Short
-	Public doubleoption As Short
-	Public doubleflag As Short
-	Public timebankcheck As Short
+    Inherits System.Windows.Forms.Form
+
+    Public myValue As Short
+    Public Image4clicked As Short
+    Public Image11clicked As Short
+    Public Image12clicked As Short
+    Public Image13clicked As Short
+    Public Image14clicked As Short
+    Public gamenum As Short
+    Public doubleoption As Short
+    Public doubleflag As Short
+    Public timebankcheck As Short
     Public timebanker As Short
     Dim SAPI
     Private Sub InternetLifeline()
@@ -353,10 +352,10 @@ Friend Class Millionaire
         numQleft = 15
         gamenum = 1
         gamenumber = 1 'global for ff form
-        Frame4.Left = VB6.TwipsToPixelsX(105)
-        Frame4.Height = VB6.TwipsToPixelsY(3450)
-        Frame4.Width = VB6.TwipsToPixelsX(14415)
-        Frame4.Top = VB6.TwipsToPixelsY(7560)
+        Frame4.Left = 7
+        Frame4.Height = 230
+        Frame4.Width = 961
+        Frame4.Top = 504
         livePlay = True
         Image11clicked = 0
         Image12clicked = 0
@@ -513,6 +512,7 @@ Friend Class Millionaire
     End Sub
     Private Sub Label1_Click(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles Label1.Click
         Dim ans As Object
+        ans = 0
         If Label1.Text <> "" Then
             labelclicked = "A"
 
@@ -547,10 +547,10 @@ Friend Class Millionaire
                     numQleft = 15
                     gamenum = 1
                     gamenumber = 1 'global for ff form
-                    Frame4.Left = VB6.TwipsToPixelsX(105)
-                    Frame4.Height = VB6.TwipsToPixelsY(3450)
-                    Frame4.Width = VB6.TwipsToPixelsX(14415)
-                    Frame4.Top = VB6.TwipsToPixelsY(7560)
+                    Frame4.Left = 7
+                    Frame4.Height = 230
+                    Frame4.Width = 961
+                    Frame4.Top = 504
                     'Picture2.Height = 2420
                     'Picture2.Width = 4020
                     'Picture2.Top = 6360
@@ -575,8 +575,8 @@ Friend Class Millionaire
     Private Sub Label1_MouseDown(ByVal eventSender As System.Object, ByVal eventArgs As System.Windows.Forms.MouseEventArgs) Handles Label1.MouseDown
         Dim Button As Short = eventArgs.Button \ &H100000
         Dim Shift As Short = System.Windows.Forms.Control.ModifierKeys \ &H10000
-        Dim X As Single = VB6.PixelsToTwipsX(eventArgs.X)
-        Dim Y As Single = VB6.PixelsToTwipsY(eventArgs.Y)
+        Dim X As Single = eventArgs.X
+        Dim Y As Single = eventArgs.Y
         Label1.BackColor = System.Drawing.ColorTranslator.FromOle(RGB(255, 255, 0))
         timTimer.Enabled = False
         If doubleoption = 1 Then
@@ -633,10 +633,10 @@ Friend Class Millionaire
                     numQleft = 15
                     gamenum = 1
                     gamenumber = 1 'global for ff form
-                    Frame4.Left = VB6.TwipsToPixelsX(105)
-                    Frame4.Height = VB6.TwipsToPixelsY(3450)
-                    Frame4.Width = VB6.TwipsToPixelsX(14415)
-                    Frame4.Top = VB6.TwipsToPixelsY(7560)
+                    Frame4.Left = 7
+                    Frame4.Height = 230
+                    Frame4.Width = 961
+                    Frame4.Top = 504
                     'Picture2.Height = 2420
                     'Picture2.Width = 4020
                     'Picture2.Top = 6360
@@ -662,8 +662,8 @@ Friend Class Millionaire
     Private Sub Label2_MouseDown(ByVal eventSender As System.Object, ByVal eventArgs As System.Windows.Forms.MouseEventArgs) Handles Label2.MouseDown
         Dim Button As Short = eventArgs.Button \ &H100000
         Dim Shift As Short = System.Windows.Forms.Control.ModifierKeys \ &H10000
-        Dim X As Single = VB6.PixelsToTwipsX(eventArgs.X)
-        Dim Y As Single = VB6.PixelsToTwipsY(eventArgs.Y)
+        Dim X As Single = eventArgs.X
+        Dim Y As Single = eventArgs.Y
         timTimer.Enabled = False
         Label2.BackColor = System.Drawing.ColorTranslator.FromOle(RGB(255, 255, 0))
         If doubleoption = 1 Then
@@ -674,6 +674,7 @@ Friend Class Millionaire
     End Sub
     Private Sub Label3_Click(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles Label3.Click
         Dim ans As Object
+        ans = 0
         If Label3.Text <> "" Then
             labelclicked = "C"
 
@@ -708,10 +709,10 @@ Friend Class Millionaire
                     numQleft = 15
                     gamenum = 1
                     gamenumber = 1 'global for ff form
-                    Frame4.Left = VB6.TwipsToPixelsX(105)
-                    Frame4.Height = VB6.TwipsToPixelsY(3450)
-                    Frame4.Width = VB6.TwipsToPixelsX(14415)
-                    Frame4.Top = VB6.TwipsToPixelsY(7560)
+                    Frame4.Left = 7
+                    Frame4.Height = 230
+                    Frame4.Width = 961
+                    Frame4.Top = 504
                     'Picture2.Height = 2420
                     'Picture2.Width = 4020
                     'Picture2.Top = 6360
@@ -738,8 +739,8 @@ Friend Class Millionaire
     Private Sub Label3_MouseDown(ByVal eventSender As System.Object, ByVal eventArgs As System.Windows.Forms.MouseEventArgs) Handles Label3.MouseDown
         Dim Button As Short = eventArgs.Button \ &H100000
         Dim Shift As Short = System.Windows.Forms.Control.ModifierKeys \ &H10000
-        Dim X As Single = VB6.PixelsToTwipsX(eventArgs.X)
-        Dim Y As Single = VB6.PixelsToTwipsY(eventArgs.Y)
+        Dim X As Single = eventArgs.X
+        Dim Y As Single = eventArgs.Y
         timTimer.Enabled = False
         Label3.BackColor = System.Drawing.ColorTranslator.FromOle(RGB(255, 255, 0))
         If doubleoption = 1 Then
@@ -750,7 +751,7 @@ Friend Class Millionaire
     End Sub
     Private Sub Label4_Click(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles Label4.Click
         Dim ans As Object
-
+        ans = 0
         If Label4.Text <> "" Then
             labelclicked = "D"
 
@@ -785,10 +786,10 @@ Friend Class Millionaire
                     numQleft = 15
                     gamenum = 1
                     gamenumber = 1 'global for ff form
-                    Frame4.Left = VB6.TwipsToPixelsX(105)
-                    Frame4.Height = VB6.TwipsToPixelsY(3450)
-                    Frame4.Width = VB6.TwipsToPixelsX(14415)
-                    Frame4.Top = VB6.TwipsToPixelsY(7560)
+                    Frame4.Left = 7
+                    Frame4.Height = 230
+                    Frame4.Width = 961
+                    Frame4.Top = 504
                     'Picture2.Height = 2420
                     'Picture2.Width = 4020
                     'Picture2.Top = 6360
@@ -814,8 +815,8 @@ Friend Class Millionaire
     Private Sub Label4_MouseDown(ByVal eventSender As System.Object, ByVal eventArgs As System.Windows.Forms.MouseEventArgs) Handles Label4.MouseDown
         Dim Button As Short = eventArgs.Button \ &H100000
         Dim Shift As Short = System.Windows.Forms.Control.ModifierKeys \ &H10000
-        Dim X As Single = VB6.PixelsToTwipsX(eventArgs.X)
-        Dim Y As Single = VB6.PixelsToTwipsY(eventArgs.Y)
+        Dim X As Single = eventArgs.X
+        Dim Y As Single = eventArgs.Y
         timTimer.Enabled = False
         Label4.BackColor = System.Drawing.ColorTranslator.FromOle(RGB(255, 255, 0))
         If doubleoption = 1 Then

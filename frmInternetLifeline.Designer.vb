@@ -26,7 +26,6 @@ Partial Class frmInternetLifeline
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -36,6 +35,8 @@ Partial Class frmInternetLifeline
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.WebBrowser1 = New Microsoft.Web.WebView2.WinForms.WebView2()
+        CType(Me.WebBrowser1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -62,15 +63,6 @@ Partial Class frmInternetLifeline
         Me.Button1.TabIndex = 2
         Me.Button1.Text = "Go!"
         Me.Button1.UseVisualStyleBackColor = True
-        '
-        'WebBrowser1
-        '
-        Me.WebBrowser1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.WebBrowser1.Location = New System.Drawing.Point(0, 0)
-        Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
-        Me.WebBrowser1.Name = "WebBrowser1"
-        Me.WebBrowser1.Size = New System.Drawing.Size(692, 608)
-        Me.WebBrowser1.TabIndex = 3
         '
         'Label2
         '
@@ -148,6 +140,18 @@ Partial Class frmInternetLifeline
         Me.Timer1.Enabled = True
         Me.Timer1.Interval = 1000
         '
+        'WebBrowser1
+        '
+        Me.WebBrowser1.CreationProperties = Nothing
+        Me.WebBrowser1.DefaultBackgroundColor = System.Drawing.Color.White
+        Me.WebBrowser1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.WebBrowser1.Location = New System.Drawing.Point(0, 0)
+        Me.WebBrowser1.Name = "WebBrowser1"
+        Me.WebBrowser1.Size = New System.Drawing.Size(692, 608)
+        Me.WebBrowser1.Source = New System.Uri("https://www.google.co.in", System.UriKind.Absolute)
+        Me.WebBrowser1.TabIndex = 12
+        Me.WebBrowser1.ZoomFactor = 1.0R
+        '
         'frmInternetLifeline
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
@@ -170,6 +174,7 @@ Partial Class frmInternetLifeline
         Me.MinimizeBox = False
         Me.Name = "frmInternetLifeline"
         Me.Text = "Internet Lifeline"
+        CType(Me.WebBrowser1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -178,7 +183,6 @@ Partial Class frmInternetLifeline
     Friend WithEvents Label1 As Label
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Button1 As Button
-    Friend WithEvents WebBrowser1 As WebBrowser
     Friend WithEvents Label2 As Label
     Friend WithEvents ProgressBar1 As ProgressBar
     Friend WithEvents Label3 As Label
@@ -188,4 +192,5 @@ Partial Class frmInternetLifeline
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents WebBrowser1 As Microsoft.Web.WebView2.WinForms.WebView2
 End Class
